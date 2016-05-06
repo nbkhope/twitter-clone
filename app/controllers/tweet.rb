@@ -1,12 +1,14 @@
 get '/tweets' do
   @tweets = Tweet.all
   erb :'tweets/index'
+end
 
 get '/tweets/new' do
   erb :'tweets/new'
 end
 
 post '/tweets' do
-  Tweet.create(params[:content])
-  redirect '/users/:id'
+  @user = User.find_by(id: sessions[:user_id])
+  Tweet.create(params[:tweet])
+  redirect '/users/#{@user.id}'
 end
