@@ -5,10 +5,10 @@ end
 
 # Same as post /sessions
 post '/login' do
-	user = User.find_by(email: params[:user][:email])
+	user = User.find_by(handle: params[:user][:handle])
 	password = params[:user][:password]
 
-	if user && User.authenticate(params[:user][:email], password)
+	if user && User.authenticate(params[:user][:handle], password)
 		session[:user_id] = user.id
 		redirect '/'
 	else
