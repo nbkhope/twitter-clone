@@ -2,6 +2,12 @@ class User < ActiveRecord::Base
   include BCrypt
   has_many :tweets
 
+  has_many :followings, class_name: 'Following', foreign_key: 'follower_id'
+  has_many :followingmes, class_name: 'Following', foreign_key: 'followee_id'
+
+  has_many :followers, through: :followingmes
+  has_many :followees, through: :followings
+
   validates :handle, uniqueness: true, presence: true
   validates :name, presence: true
   validates :email, uniqueness: true, presence: true

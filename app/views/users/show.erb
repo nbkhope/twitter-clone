@@ -1,10 +1,55 @@
-<!-- 
+<div id="followingModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+          data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Following</h4>
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+      <% @user.followees.each do |followee| %>
+          <li><a href="/users/<%= followee.id %>"><%= followee.handle %></a></li>
+      <% end %>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="followersModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+          data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Followers</h4>
+      </div>
+      <div class="modal-body">
+      <ul class="nav nav-pills nav-stacked">
+        <% @user.followers.each do |follower| %>
+         <li><a href="/users/<%= follower.id %>"><%= follower.handle %></a></li>
+        <% end %>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
 
 User Profile page.
 Show user info and all their tweets.
 
 -->
 <h1><%= @user.handle %></h1>
+
+<a class="btn btn-primary" role="button" data-toggle='modal' data-target="#followingModal"> Following </a>
+<a class="btn btn-primary" role="button" data-toggle='modal' data-target="#followersModal"> Followers </a>
+<% if @user.followees.find { |followee| followee.id != params[:id] } %>
+  <a class="btn btn-danger" href="/follow/<%= @user.id %>">Follow</a>
+<% else %>
+  <a class="btn btn-danger" href="/follow/<%= @user.id %>">Unfollow</a>
+<% end %>
+
 <h3><%= @user.name %></h3>
 
 <table>

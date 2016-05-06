@@ -56,3 +56,11 @@ delete '/users/:id' do
 
 	redirect '/'
 end
+
+get '/follow/:id' do
+	@me = User.find_by(id: session[:user_id])
+	@user = User.find_by(id: params[:id])
+	@user.followers << @me
+
+	redirect "/users/#{@user.id}"
+end
