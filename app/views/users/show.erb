@@ -41,7 +41,12 @@ Show user info and all their tweets.
 
 -->
 <h1><%= @user.handle %></h1>
+<div class="col-xs-12 col-md-6">
+<img src="/Star-Wars-Chewbacca.jpg" width="300px">
+<h3><%= @user.name %></h3>
 
+</div>
+<div class="col-xs-12 col-md-6" style="text-align: right">
 <a class="btn btn-primary" role="button" data-toggle='modal' data-target="#followingModal"> Following </a>
 <a class="btn btn-primary" role="button" data-toggle='modal' data-target="#followersModal"> Followers </a>
 <% if true %>
@@ -49,9 +54,9 @@ Show user info and all their tweets.
 <% else %>
   <a class="btn btn-danger" href="/follow/<%= @user.id %>">Unfollow</a>
 <% end %>
+</div>
 
-<h3><%= @user.name %></h3>
-
+<div class="col-xs-12">
 <% @user.tweets.each do |tweet| %>
 <div class="well">
   <blockquote>
@@ -60,3 +65,4 @@ Show user info and all their tweets.
   </blockquote>
 </div>
 <%end %>
+</div>
