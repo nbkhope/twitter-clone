@@ -22,6 +22,21 @@
 </head>
 <body>
   <!-- Menu (Navigation Bar) -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Twitter Clone</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/users/new"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Register</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Site Main Content -->
   <%= yield %>
