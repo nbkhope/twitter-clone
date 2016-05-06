@@ -1,17 +1,41 @@
-<p>Test</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Star Wars Crawling Titles</title>
+  <link rel="stylesheet" type="text/css" href="/css/starwars.css">
+</head>
+<body>
+  <a href="/">HOME</a>
 
-<table>
-  <tr>
-    <th>Tweets</th>
-    <th>Authors</th>
-  </tr>
-  <% @all_tweets.each do |tweet| %>
-  <tr>
-    <td>
-      <%= tweet.content %>
-      <%= tweet.user.handle %>
-    </td>
-      <%end %>
-  </tr>
+  <p id="start">Last night at the corner of Hawthorne and Folsom&hellip;</p>
+  <h1>DBC<sub>CRUD</sub></h1>
 
-</table>
+  <div id="titles"><div id="titlecontent">
+
+    <p class="center">EPISODE PHASE IV<br />ATTACK OF THE TWITTER CLONE</p>
+
+    <p>There is unrest due to the massive outgrowth of Faker.</p>
+
+
+    <table>
+      <tr>
+        <th>Tweets</th>
+        <th>Authors</th>
+      </tr>
+      <% @all_tweets.each do |tweet| %>
+      <tr>
+        <td>
+          <%= tweet.content %>
+        </td>
+        <td>
+          <%= tweet.user.handle %>
+        </td>
+        <%end %>
+      </tr>
+
+    </table>
+  </div></div>
+
+
+</body>
+</html>
