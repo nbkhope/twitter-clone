@@ -1,0 +1,17 @@
+<p>Test</p>
+
+<table>
+  <tr>
+    <th>Tweets</th>
+    <th>Authors</th>
+  </tr>
+  <% @all_tweets.each do |tweet| %>
+  <tr>
+    <td>
+      <%= tweet.content %>
+      <%= tweet.user.handle %>
+    </td>
+      <%end %>
+  </tr>
+
+</table>
