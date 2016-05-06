@@ -2,7 +2,7 @@
 
     * { padding: 0; margin: 0; }
 
-    body, html
+    .starwars-body, .starwars-html
     {
       width: 100%;
       height: 100%;
@@ -60,7 +60,7 @@
       100% { opacity: 0; }
     }
 
-    h1
+    .starwars-title
     {
       position: absolute;
       width: 2.6em;
@@ -82,7 +82,7 @@
       animation: logo 5s ease-out 2.5s;
     }
 
-    h1 sub
+    .starwars-title sub
     {
       display: block;
       font-size: 0.3em;
@@ -121,7 +121,7 @@
     }
 
     /* the interesting 3D scrolling stuff */
-    #titles
+    #starwars-titles
     {
       position: absolute;
       width: 18em;
@@ -144,7 +144,7 @@
       transform: perspective(300px) rotateX(25deg);
     }
 
-    #titles:after
+    #starwars-titles:after
     {
       position: absolute;
       content: ' ';
@@ -160,24 +160,24 @@
       pointer-events: none;
     }
 
-    #titles p
+    #starwars-titles p
     {
       text-align: justify;
       margin: 0.8em 0;
     }
 
-    #titles p.center
+    #starwars-titles p.center
     {
       text-align: center;
     }
 
-    #titles a
+    #starwars-titles a
     {
       color: #ff6;
       text-decoration: underline;
     }
 
-    #titlecontent
+    #starwars-titlecontent
     {
       position: absolute;
       top: 100%;
