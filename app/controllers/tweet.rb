@@ -8,7 +8,7 @@ get '/tweets/new' do
 end
 
 post '/tweets' do
-  @user = User.find_by(id: sessions[:user_id])
+  @user = User.find_by(id: session[:user_id])
   Tweet.create(params[:tweet])
-  redirect '/users/#{@user.id}'
+  redirect "/users/#{@user.id}"
 end

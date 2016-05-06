@@ -5,6 +5,10 @@ get '/users/new' do
 	erb :'users/new'
 end
 
+get '/register' do
+	redirect '/users/new'
+end
+
 # Creates a user account
 post '/users' do
 	@user = User.new(params[:user])
