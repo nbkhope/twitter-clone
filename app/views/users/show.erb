@@ -1,0 +1,26 @@
+<!-- 
+
+User Profile page.
+Show user info and all their tweets.
+
+-->
+<h1><%= @user.handle %></h1>
+<h3><%= @user.name %></h3>
+
+<table>
+
+  <tr>
+    <th>Tweets</th>
+    <th>When</th>
+  </tr>
+
+  <% @user.tweets.each do |tweet| %>
+
+  <tr>
+    <td><%= tweet.content %></td>
+    <td><%= tweet.created_at %></td>
+  </tr>
+
+  <%end %>
+
+</table>
