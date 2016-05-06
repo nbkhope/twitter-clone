@@ -44,7 +44,11 @@ Show user info and all their tweets.
 
 <a class="btn btn-primary" role="button" data-toggle='modal' data-target="#followingModal"> Following </a>
 <a class="btn btn-primary" role="button" data-toggle='modal' data-target="#followersModal"> Followers </a>
-<a class="btn btn-danger" href="/follow/<%= @user.id %>">Follow</a>
+<% if @user.followees.find { |followee| followee.id != params[:id] } %>
+  <a class="btn btn-danger" href="/follow/<%= @user.id %>">Follow</a>
+<% else %>
+  <a class="btn btn-danger" href="/follow/<%= @user.id %>">Unfollow</a>
+<% end %>
 
 <h3><%= @user.name %></h3>
 
