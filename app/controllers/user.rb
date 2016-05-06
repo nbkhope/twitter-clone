@@ -15,7 +15,7 @@ post '/users' do
 
 	if @user.save
 		# If account was created successfully, redirect to login page
-		redirect "/users/#{@user.id}"
+		redirect "/login"
 	else
 		erb :'users/new'
 	end
