@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <!-- Custom Styles -->
   <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="/css/starwars.css">
 </head>
 <body>
   <!-- Menu (Navigation Bar) -->
@@ -29,17 +30,26 @@
       </div>
       <ul class="nav navbar-nav">
         <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-        <li><a href="/"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+        <li><a href="/tweets/new"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> New Tweet</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/users/new"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Register</a></li>
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+        <% if logged_in? %>
+          <li><a href="/users/<%= session[:user_id] %>"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Username</a></li>
+          <li><a href="/logout"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Logout</a></li>
+        <% else %>
+          <li><a href="/users/new"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Register</a></li>
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+        <% end %>
       </ul>
     </div>
   </nav>
 
   <!-- Site Main Content -->
-  <%= yield %>
+  <div class="container">
+    <div class="row row-content">
+        <%= yield %>
+    </div>
+  </div>
 
   <!-- jQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

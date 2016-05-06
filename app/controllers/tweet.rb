@@ -9,6 +9,6 @@ end
 
 post '/tweets' do
   @user = User.find_by(id: session[:user_id])
-  Tweet.create(params[:tweet])
+  @user.tweets << Tweet.create(params[:tweet])
   redirect "/users/#{@user.id}"
 end
