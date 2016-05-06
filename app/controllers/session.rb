@@ -10,7 +10,7 @@ post '/login' do
 
 	if user && User.authenticate(params[:user][:handle], password)
 		session[:user_id] = user.id
-		redirect '/'
+		redirect "/users/#{user.id}"
 	else
 		redirect '/login'
 	end
@@ -20,7 +20,7 @@ end
 get '/logout' do
 	session.clear
 
-	redirect '/login'
+	redirect '/'
 end
 
 # Alias for /login
