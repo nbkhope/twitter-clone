@@ -1,0 +1,34 @@
+<div class="starwars-body">
+
+  <p id="start">Last night at the corner of Hawthorne and Folsom&hellip;</p>
+  <h1 class="starwars-title">DBC<sub class=".starwars-title">CRUD</sub></h1>
+
+  <div id="starwars-titles"><div id="starwars-titlecontent">
+
+    <p class="center">EPISODE PHASE IV<br />ATTACK OF THE TWITTER CLONE</p>
+
+    <p>There is unrest due Faker getting out of control!</p>
+
+
+    <table>
+      <tr>
+        <th>Tweets</th>
+        <th>Authors</th>
+      </tr>
+      <% @tweets.reverse.each do |tweet| %>
+      <tr>
+        <td>
+          <%= tweet.content %>
+        </td>
+        <td>
+          @<%= tweet.user.handle %>
+        </td>
+        <%end %>
+      </tr>
+
+    </table>
+  </div></div>
+
+
+</div>
+
