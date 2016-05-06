@@ -14,7 +14,7 @@ Show user info and all their tweets.
     <th>When</th>
   </tr>
 
-  <% @all_user_tweets.each do |tweet| %>
+  <% @user.tweets.each do |tweet| %>
 
   <tr>
     <td><%= tweet.content %></td>
