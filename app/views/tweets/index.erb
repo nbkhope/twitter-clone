@@ -1,7 +1,6 @@
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CSS Star Wars Crawling Titles</title>
+  <title>Twitter Clone</title>
   <link rel="stylesheet" type="text/css" href="/css/starwars.css">
 </head>
 <body>
@@ -14,7 +13,7 @@
 
     <p class="center">EPISODE PHASE IV<br />ATTACK OF THE TWITTER CLONE</p>
 
-    <p>There is unrest due to the massive outgrowth of Faker.</p>
+    <p>There is unrest due Faker getting out of control!</p>
 
 
     <table>
@@ -22,7 +21,7 @@
         <th>Tweets</th>
         <th>Authors</th>
       </tr>
-      <% @all_tweets.each do |tweet| %>
+      <% @tweets.reverse.each do |tweet| %>
       <tr>
         <td>
           <%= tweet.content %>
@@ -38,4 +37,4 @@
 
 
 </body>
-</html>
+
