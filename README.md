@@ -1,49 +1,87 @@
 # twitter-clone
 
-Demo at https://twitterclonest.herokuapp.com/
-
-## Team
-
-* [@buckmelton](https://github.com/buckmelton)
-* [@ftBessmann](https://github.com/ftBessmann)
-* [@kristallam](https://github.com/kristallam)
-* [@nbkhope](https://github.com/nbkhope)
-* [@portatlas](https://github.com/portatlas)
-
 ## Overview
 
 A web application that allows users to share their thoughts in only a few 
 sentences.
+
+Demo at https://twitterclonest.herokuapp.com/
+
+## Team
+
+* [Buck Melton @buckmelton](https://github.com/buckmelton)
+* [Mila Bessmann @ftBessmann](https://github.com/ftBessmann)
+* [Kristal Lam @kristallam](https://github.com/kristallam)
+* [Renan Martins @nbkhope](https://github.com/nbkhope)
+* [Andrew Vathanakamsang @portatlas](https://github.com/portatlas)
 
 ## Technologies
 
 * HTML
 * CSS
 * Bootstrap
+* Ruby
 * Sinatra
 
 ## Screenshots
 
-![Screenshot 01](public/images/twitterclone_01.png)  
+![Screenshot 01](public/images/twitterclone_01b.png)  
 *Screenshot 1*.  Home page
 
-![Screenshot 02](public/images/twitterclone_02.png)  
+  
+![Screenshot 02](public/images/twitterclone_02b.png)  
 *Screenshot 2*.  Login page
 
-![Screenshot 03](public/images/twitterclone_03.png)  
+  
+![Screenshot 03](public/images/twitterclone_03b.png)  
 *Screenshot 3*.  Profile page
 
-![Screenshot 04](public/images/twitterclone_04.png)  
+  
+![Screenshot 04](public/images/twitterclone_04b.png)  
 *Screenshot 4*.  New tweet page
 
-![Screenshot 05](public/images/twitterclone_05.png)  
+  
+![Screenshot 05](public/images/twitterclone_05b.png)  
 *Screenshot 5*.  Profile page with tweets
 
-![Screenshot 06](public/images/twitterclone_06.png)  
+  
+![Screenshot 06](public/images/twitterclone_06b.png)  
 *Screenshot 6*.  User tweets featured on home page
 
-![Screenshot 07](public/images/twitterclone_07.png)  
+  
+![Screenshot 07](public/images/twitterclone_07b.png)  
 *Screenshot 7*.  A certain user's followers list
+
+
+## Installation
+
+Run bundle to install all dependencies:
+
+```
+bundle install
+```
+
+Then, create, migrate, and seed the database:
+
+```
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:seed
+```
+
+Use shotgun to run the server:
+
+```
+bundle exec shotgun config.ru
+```
+
+It will be available at [http://localhost:9393/](http://localhost:9393/)
+
+To run the application console to play with the data and models, use:
+
+```
+bundle exec rake console
+```
 
 ## MVP Features
 
