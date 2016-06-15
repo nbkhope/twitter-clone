@@ -53,6 +53,36 @@ Demo at https://twitterclonest.herokuapp.com/
 *Screenshot 7*.  A certain user's followers list
 
 
+## Installation
+
+Run bundle to install all dependencies:
+
+```
+bundle install
+```
+
+Then, create, migrate, and seed the database:
+
+```
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:seed
+```
+
+Use shotgun to run the server:
+
+```
+bundle exec shotgun config.ru
+```
+
+It will be available at [http://localhost:9393/](http://localhost:9393/)
+
+To run the application console to play with the data and models, use:
+
+```
+bundle exec rake console
+```
+
 ## MVP Features
 
 ### Highest Priority
