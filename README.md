@@ -1,5 +1,10 @@
 # twitter-clone
 
+## Overview
+
+A web application that allows users to share their thoughts in only a few 
+sentences.
+
 Demo at https://twitterclonest.herokuapp.com/
 
 ## Team
@@ -10,16 +15,12 @@ Demo at https://twitterclonest.herokuapp.com/
 * [@nbkhope](https://github.com/nbkhope)
 * [@portatlas](https://github.com/portatlas)
 
-## Overview
-
-A web application that allows users to share their thoughts in only a few 
-sentences.
-
 ## Technologies
 
 * HTML
 * CSS
 * Bootstrap
+* Ruby
 * Sinatra
 
 ## Screenshots
