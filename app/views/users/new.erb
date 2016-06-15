@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Registration Page</h1>
+  <form class="form-horizontal" action="/users" method="post">
+
+  <div class="form-group">
+    <label for="user_name" class="control-label">Name: </label>
+    <input class="form-control" id="user_name" type="text" name="user[name]">
+  </div>
+
+  <div class="form-group">
+    <label for="user_email" class="control-label">E-mail: </label>
+    <input class="form-control" id="user_email" type="email" name="user[email]">
+  </div>
+
+  <div class="form-group">
+    <label for="user_handle" class="control-label">Handle: </label>
+    <input class="form-control" id="user_handle" type="text" name="user[handle]">
+  </div>
+
+  <div class="form-group">
+    <label for="user_password" class="control-label">Password: </label>
+    <input class="form-control" id="user_password" type="password" name="user[password]">
+  </div>
+
+    <button class="btn btn-primary" type="submit">SUBMIT</button>
+  </form>
+</div>
