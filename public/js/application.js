@@ -4,4 +4,15 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+  // To count the remaining characters when writing a tweet
+  var maxChars = 140;
+  $('#count_message').html(maxChars + ' remaining');
+
+  $('#tweet_content').keyup(function() {
+    var tweetLength = $('#tweet_content').val().length;
+    var textRemaining = maxChars - tweetLength;
+
+    $('#count_message').html(textRemaining + ' remaining');
+  });
 });
