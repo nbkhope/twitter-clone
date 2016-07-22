@@ -57,6 +57,7 @@ Show user info and all their tweets.
 </div>
 
 <div class="col-xs-12">
+<%= "This user hasn't posted any tweets yet." if @user.tweets.empty? %>
 <% @user.tweets.each do |tweet| %>
 <div class="well">
   <blockquote>
