@@ -46,5 +46,4 @@ describe User do
     end.to raise_error ActiveRecord::RecordInvalid
   end
 
-
 end
