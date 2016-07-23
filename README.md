@@ -2,18 +2,18 @@
 
 ## Overview
 
-A web application that allows users to share their thoughts in only a few 
+A web application that allows users to share their thoughts in only a few
 sentences.
 
 Demo at https://twitterclonest.herokuapp.com/
 
 ## Team
 
-* [Buck Melton @buckmelton](https://github.com/buckmelton)
-* [Mila Bessmann @ftBessmann](https://github.com/ftBessmann)
-* [Kristal Lam @kristallam](https://github.com/kristallam)
-* [Renan Martins @nbkhope](https://github.com/nbkhope)
-* [Andrew Vathanakamsang @portatlas](https://github.com/portatlas)
+* [Andrew Vathanakamsang](https://github.com/portatlas)
+* [Buck Melton](https://github.com/buckmelton)
+* [Kristal Lam](https://github.com/kristallam)
+* [Mila Bessmann](https://github.com/ftBessmann)
+* [Renan Martins](https://github.com/nbkhope)
 
 ## Technologies
 
@@ -22,33 +22,34 @@ Demo at https://twitterclonest.herokuapp.com/
 * Bootstrap
 * Ruby
 * Sinatra
+* PostgreSQL
 
 ## Screenshots
 
 ![Screenshot 01](public/images/twitterclone_01b.png)  
 *Screenshot 1*.  Home page
 
-  
+
 ![Screenshot 02](public/images/twitterclone_02b.png)  
 *Screenshot 2*.  Login page
 
-  
+
 ![Screenshot 03](public/images/twitterclone_03b.png)  
 *Screenshot 3*.  Profile page
 
-  
+
 ![Screenshot 04](public/images/twitterclone_04b.png)  
 *Screenshot 4*.  New tweet page
 
-  
+
 ![Screenshot 05](public/images/twitterclone_05b.png)  
 *Screenshot 5*.  Profile page with tweets
 
-  
+
 ![Screenshot 06](public/images/twitterclone_06b.png)  
 *Screenshot 6*.  User tweets featured on home page
 
-  
+
 ![Screenshot 07](public/images/twitterclone_07b.png)  
 *Screenshot 7*.  A certain user's followers list
 
@@ -117,3 +118,7 @@ bundle exec rake console
 4 A user can view the site live on the web
 4 A user can have a solid experience because the site is fully tested
 ```
+
+## Database Schema
+
+![database schema](schema.png)

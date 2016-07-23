@@ -7,7 +7,7 @@
 
   <title>Twitter Clone</title>
 
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -34,7 +34,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
-          <li><a href="/users/<%= session[:user_id] %>"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Username</a></li>
+          <li><a href="/users/<%= session[:user_id] %>"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> <%= current_user.name %></a></li>
           <li><a href="/logout"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Logout</a></li>
         <% else %>
           <li><a href="/users/new"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Register</a></li>
