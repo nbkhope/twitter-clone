@@ -84,6 +84,22 @@ To run the application console to play with the data and models, use:
 bundle exec rake console
 ```
 
+## Testing
+
+You need to run the following in order to prepare the test database:
+
+```
+bundle exec rake db:test:prepare
+```
+
+If you do not do that, your rspec tests will fail.
+
+Then, to run the tests, use:
+
+```
+bundle exec rake spec
+```
+
 ## MVP Features
 
 ### Highest Priority
